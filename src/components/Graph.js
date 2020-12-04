@@ -20,7 +20,7 @@ svg.attr("height",height);
 let g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
 const y = d3.scaleLinear()
-    .domain([0,10000000])
+    .domain([0,13])
     .range([iheight,0]);
 
 const x = d3.scaleBand()
@@ -34,8 +34,8 @@ const x = d3.scaleBand()
          .attr("class","bar")
          .style("fill","steelblue")
          .attr("x",d=> x(d.name))
-         .attr("y",d=>y(d.views))
-         .attr("height", d=> iheight - y(d.views))
+         .attr("y",d=>y(d.seasons))
+         .attr("height", d=> iheight - y(d.seasons))
          .attr("width",x.bandwidth())
     
     g.append("g")

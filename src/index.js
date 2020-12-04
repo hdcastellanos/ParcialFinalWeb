@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import MovieList from "./components/MovieList.js";
+import SerieList from "./components/SerieList.js";
 import {IntlProvider} from "react-intl";
 import localeEnMessages from "./locales/en.json";
 import localeEsMessages from "./locales/es.json";
@@ -28,7 +28,7 @@ function getBrowserLang(){
 ReactDOM.render(
 
   <IntlProvider locale={getBrowserLang()} messages={getLocale()}>
-    <MovieList lang={getBrowserLang()}/>
+    <SerieList lang={getBrowserLang()}/>
   </IntlProvider>
   ,document.getElementById('root')
   
