@@ -32,7 +32,7 @@ const x = d3.scaleBand()
 
     bars.enter().append("rect")
          .attr("class","bar")
-         .style("fill","steelblue")
+         .style("fill","orange")
          .attr("x",d=> x(d.name))
          .attr("y",d=>y(d.seasons))
          .attr("height", d=> iheight - y(d.seasons))
